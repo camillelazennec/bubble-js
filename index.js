@@ -1,3 +1,6 @@
+
+
+
 const bubbleMarker = () => {
     const bubble = document.createElement("span");
     bubble.classList.add("bubble");
@@ -12,6 +15,10 @@ const bubbleMarker = () => {
 
     const plusMinus = Math.random() > 0.5 ? 1 : -1; //La bulle part à droite ou à gauche
     bubble.style.setProperty("--left", Math.random() * 100 * plusMinus + "%");
+
+    bubble.addEventListener("click", () => { //faire disparaitre la bulle au click
+        bubble.remove();
+    });
 
     setTimeout(() => { //supprime la bulle après 8s
         bubble.remove();
