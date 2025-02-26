@@ -28,5 +28,5 @@ const bubbleMarker = () => {
 };
 
 
-setInterval(bubbleMarker, 3000); //Fonction jouer tt les 3 seconde
+setInterval(bubbleMarker, 1000); //Fonction jouer tt les 3 seconde
 
