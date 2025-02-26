@@ -1,5 +1,5 @@
-
-
+const counterDisplay = document.querySelector("h3"); //compteur des bulles touchées
+let counter = 0;
 
 const bubbleMarker = () => {
     const bubble = document.createElement("span");
@@ -17,6 +17,8 @@ const bubbleMarker = () => {
     bubble.style.setProperty("--left", Math.random() * 100 * plusMinus + "%");
 
     bubble.addEventListener("click", () => { //faire disparaitre la bulle au click
+        counter++;
+        counterDisplay.textContent = counter; //afficher le compteur
         bubble.remove();
     });
 
